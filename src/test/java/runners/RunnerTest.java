@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = {"pretty"},
 		features = "src/test/resources/features",
 		glue = "stepsDefinitions",
-		//tags = "@loginSucesso",
+		tags = "@CadastrarUsuario",
 		snippets = SnippetType.CAMELCASE, //irá colocar em camelCase automático os nomes dos métodos dos steps
 		monochrome = true, //deixa o texto do console branco
 		dryRun = false //se for true, irá apenas gerar os steps no console ao invés de abrir o navegador

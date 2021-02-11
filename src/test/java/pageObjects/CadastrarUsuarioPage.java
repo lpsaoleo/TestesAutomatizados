@@ -5,19 +5,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class CadastrarUsuarioPage {
 
-	@FindBy(id = "systemUser_employeeName_empId")
+	@FindBy(id = "systemUser_employeeName_empName")
 	public WebElement campoEmployee;
 
-	@FindBy(name = "systemUser_userName")
+	@FindBy(id = "systemUser_userName")
 	public WebElement campoUsername;
 
-	@FindBy(name = "systemUser[password]")
+	@FindBy(id = "systemUser_password")
 	public WebElement campoPassword;
 
-	@FindBy(name = "systemUser[confirmPassword]")
+	@FindBy(id = "systemUser_confirmPassword")
 	public WebElement campoConfirmarPassword;
 
-	@FindBy(name = "btnSave")
+	@FindBy(id = "btnSave")
 	public WebElement botaoSalvar;
 
 	public void informarCampoEmployeeName(String employeeName) {

@@ -15,7 +15,7 @@ public class TelaInicialPage extends BasePage{
 	private WebElement botaoAdd;
 	
 	public void acionarBotaoAdd() {
-		
+		botaoAdd.click();
 	}
 	
 }

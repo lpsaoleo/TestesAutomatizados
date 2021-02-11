@@ -19,7 +19,7 @@ public class CadastrarUsuarioSteps {
 	}
 
 	@Quando("acionar o botao add")
-	public void acionarOBotaoAdd() {
+	public void acionarBotaoAdd() {
 	    Na(TelaInicialPage.class).acionarBotaoAdd();
 	}
 
@@ -44,13 +44,13 @@ public class CadastrarUsuarioSteps {
 	}
 
 	@E("^acionar o botao salvar$")
-	public void acionarOBotaoSalvar() throws Throwable{
-		acionarOBotaoSalvar();
+	public void botaoSalvar() throws Throwable{
+		Na(CadastrarUsuarioPage.class).botaoSalvar();
 	}
 	
 	@Entao("^o sistema cadastra o usuario \"([^\"]*)\"$")
 	public void oSistemaCadastraOUsuario(String userName) throws Throwable {
-		assertTrue(driver.findElement(By.xpath("//a[text()='"+userName+"']")).isSelected());
+		assertTrue(driver.findElement(By.xpath("//a[text()='"+userName+"']")).isDisplayed());
 	}
 
 	
