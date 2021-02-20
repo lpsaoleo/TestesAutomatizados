@@ -1,10 +1,12 @@
 package pageObjects;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import static utils.Utils.*;
 
 public class TelaInicialPage extends BasePage{
-
+	
 	//BasePage
 	public void acionarAbaAdmin() {
 		abaAdmin.click();
@@ -18,4 +20,11 @@ public class TelaInicialPage extends BasePage{
 		botaoAdd.click();
 	}
 	
+	public void acessarMenuCustomField() {
+		Actions acao = new Actions(driver);
+		acao.moveToElement(abaPim).build().perform();
+		acao.moveToElement(menuConfigurations).build().perform();
+		acao.moveToElement(menuField).click().build().perform();
+	}
+		
 }

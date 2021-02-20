@@ -7,5 +7,14 @@ public class BasePage {
 
 	@FindBy(linkText = "Admin")
 	public WebElement abaAdmin;
+	
+	@FindBy(linkText = "PIM")
+	public WebElement abaPim;
+	
+	@FindBy(id = "menu_pim_Configuration")
+	public WebElement menuConfigurations;
+	
+	@FindBy(id = "menu_pim_listCustomFields")
+	public WebElement menuField;
 		
 }
