@@ -9,10 +9,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		//plugins do cucumber
-		plugin = {"pretty"},
+		plugin = {"pretty", "html:target/cucumber-report"}, //o relatorio sera colocado dentro da pasta target
 		features = "src/test/resources/features",
 		glue = "stepsDefinitions",
-		tags = "@dropdown",
+		//tags = "@dropdown",
 		snippets = SnippetType.CAMELCASE, //irá colocar em camelCase automático os nomes dos métodos dos steps
 		monochrome = true, //deixa o texto do console branco
 		dryRun = false //se for true, irá apenas gerar os steps no console ao invés de abrir o navegador

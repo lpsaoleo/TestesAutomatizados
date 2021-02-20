@@ -1,0 +1,6 @@
+Cria-se uma feature no cucumber em formato file.feature
+A partir da feature, executa-se o Runner com dryrun ligado
+O runner gerará os steps
+Os steps devem ser copiados para uma classe step
+A partir da classe step, cria-se as classes de page do sistema com o mapeamento de elementos e metodos para executar as açoes
+Voltando a step, chama-se os metodos usando o page factory (Na)

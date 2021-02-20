@@ -2,9 +2,13 @@ package utils;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.core.api.Scenario;
 
 public class Utils {
 	
@@ -22,6 +26,12 @@ public class Utils {
 	//o <T> indica que é uma variável generica
 	public static <T> T Na(Class<T> classe){
 		return PageFactory.initElements(driver,classe);
+	}
+	
+	//metodo de tirar screenshots
+	public static void capturarTela(Scenario scenario) {
+		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+		scenario.embed(screenshot,"image/png");
 	}
 	
 }
